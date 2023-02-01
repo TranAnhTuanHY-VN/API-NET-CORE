@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nhom2_usol_Api_QLKHO", "Nhom2_usol_Api_QLKHO\Nhom2_usol_Api_QLKHO.csproj", "{E020759D-43CD-4639-B175-136D113E8D25}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9F2DCD16-3173-4A15-8C2F-0FF81BCE7373}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E020759D-43CD-4639-B175-136D113E8D25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E020759D-43CD-4639-B175-136D113E8D25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E020759D-43CD-4639-B175-136D113E8D25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E020759D-43CD-4639-B175-136D113E8D25}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0A2E1253-3510-4ECC-9CD7-94909133F76A}
+	EndGlobalSection
+EndGlobal
