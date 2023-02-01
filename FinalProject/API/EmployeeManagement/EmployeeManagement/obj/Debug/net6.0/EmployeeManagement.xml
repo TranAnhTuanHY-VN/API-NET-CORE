@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EmployeeManagement</name>
+    </assembly>
+    <members>
+        <member name="M:EmployeeManagement.Controllers.DepartmentsController.GetAllDepartment">
+            <summary>
+            Lấy toàn bộ danh sách phòng ban
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EmployeeManagement.Controllers.EmployeesController.GetAllEmployee">
+            <summary>
+            Lấy toàn bộ danh sách nhân viên
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
