@@ -1,5 +1,6 @@
 ﻿using Api_QLKhachSan_N2.Entities;
 using Dapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
@@ -10,7 +11,7 @@ using System.Collections.Generic;
 
 namespace Api_QLKhachSan_N2.Controllers
 {
-    [Route("api/v1/KhachHang")]
+    [Route("api/v1/[controller]")]
     [ApiController]
     public class KhachHangController : ControllerBase
     {
@@ -25,6 +26,7 @@ namespace Api_QLKhachSan_N2.Controllers
         /// </summary>
         /// <returns>Danh sách khách hàng</returns>
         [HttpGet]
+        [Authorize]
         [SwaggerResponse(StatusCodes.Status200OK, type: typeof(List<KhachHang>))]
         [SwaggerResponse(StatusCodes.Status400BadRequest)]
         [SwaggerResponse(StatusCodes.Status500InternalServerError)]
@@ -143,6 +145,43 @@ namespace Api_QLKhachSan_N2.Controllers
                 if(result != null)
                 {
                     return StatusCode(StatusCodes.Status200OK, kh);
+                }
+                return StatusCode(StatusCodes.Status400BadRequest, "Lỗi db!");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("Lỗi server!");
+            }
+        }
+
+        [HttpDelete("{id}")]
+        [SwaggerResponse(StatusCodes.Status200OK, type: typeof(Guid?))]
+        [SwaggerResponse(StatusCodes.Status400BadRequest)]
+        [SwaggerResponse(StatusCodes.Status500InternalServerError)]
+        public IActionResult deleteKhachHang([FromRoute] Guid? id)
+        {
+            try
+            {
+                // Kết nối DB
+                var appSetting = Configuration.GetSection("AppSetting");
+                string connectionString = appSetting.GetValue<string>("ConnectionString");
+                SqlConnection myConnection = new SqlConnection(connectionString);
+                myConnection.Open();
+
+                // Chuẩn bị tên proc
+                var deleteProcedure = "proc_deleteKhachHang";
+
+                // Chuẩn bị param cho proc
+                DynamicParameters parameters = new DynamicParameters();
+                parameters.Add("@khid", id);
+
+                // Thực thi proc
+                var result = myConnection.Query(deleteProcedure, parameters, commandType: System.Data.CommandType.StoredProcedure);
+
+                // Xử lý giá trị trả về từ db
+                if (result != null)
+                {
+                    return StatusCode(StatusCodes.Status200OK, id);
                 }
                 return StatusCode(StatusCodes.Status400BadRequest, "Lỗi db!");
             }

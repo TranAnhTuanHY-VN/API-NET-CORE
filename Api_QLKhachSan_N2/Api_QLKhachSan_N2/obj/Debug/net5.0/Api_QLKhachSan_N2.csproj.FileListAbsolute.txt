@@ -58,3 +58,16 @@ D:\Admin\Documents\code\Nhom2_usol\Api_QLKhachSan_N2\Api_QLKhachSan_N2\obj\Debug
 D:\Admin\Documents\code\Nhom2_usol\Api_QLKhachSan_N2\Api_QLKhachSan_N2\obj\Debug\net5.0\Api_QLKhachSan_N2.pdb
 D:\Admin\Documents\code\Nhom2_usol\Api_QLKhachSan_N2\Api_QLKhachSan_N2\obj\Debug\net5.0\Api_QLKhachSan_N2.genruntimeconfig.cache
 D:\Admin\Documents\code\Nhom2_usol\Api_QLKhachSan_N2\Api_QLKhachSan_N2\obj\Debug\net5.0\ref\Api_QLKhachSan_N2.dll
+D:\Admin\Documents\code\Nhom2_usol\Api_QLKhachSan_N2\Api_QLKhachSan_N2\bin\Debug\net5.0\Castle.Core.dll
+D:\Admin\Documents\code\Nhom2_usol\Api_QLKhachSan_N2\Api_QLKhachSan_N2\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Admin\Documents\code\Nhom2_usol\Api_QLKhachSan_N2\Api_QLKhachSan_N2\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\Admin\Documents\code\Nhom2_usol\Api_QLKhachSan_N2\Api_QLKhachSan_N2\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\Admin\Documents\code\Nhom2_usol\Api_QLKhachSan_N2\Api_QLKhachSan_N2\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+D:\Admin\Documents\code\Nhom2_usol\Api_QLKhachSan_N2\Api_QLKhachSan_N2\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Admin\Documents\code\Nhom2_usol\Api_QLKhachSan_N2\Api_QLKhachSan_N2\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Proxies.dll
+D:\Admin\Documents\code\Nhom2_usol\Api_QLKhachSan_N2\Api_QLKhachSan_N2\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Admin\Documents\code\Nhom2_usol\Api_QLKhachSan_N2\Api_QLKhachSan_N2\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Admin\Documents\code\Nhom2_usol\Api_QLKhachSan_N2\Api_QLKhachSan_N2\bin\Debug\net5.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Admin\Documents\code\Nhom2_usol\Api_QLKhachSan_N2\Api_QLKhachSan_N2\bin\Debug\net5.0\Newtonsoft.Json.dll
+D:\Admin\Documents\code\Nhom2_usol\Api_QLKhachSan_N2\Api_QLKhachSan_N2\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+D:\Admin\Documents\code\Nhom2_usol\Api_QLKhachSan_N2\Api_QLKhachSan_N2\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
