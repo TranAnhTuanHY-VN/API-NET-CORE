@@ -19,7 +19,8 @@ namespace Api_QLKhachSan_N2.Entities
         public IConfiguration Configuration { get; }
         public JwtAuthResponse Authenticate(string userName, string password)
         {
-            if(!KiemTra(userName, password))
+            string KQ = KiemTra(userName, password);
+            if (KQ == null)
             {
                 return null;
             }
@@ -42,11 +43,12 @@ namespace Api_QLKhachSan_N2.Entities
             {
                 token = token,
                 user_name = userName,
+                role = KQ,
                 expires_in = (int)tokenExpiryTimeStamp.Subtract(DateTime.Now).TotalSeconds
             };
         }
 
-        public bool KiemTra(string userName, string password)
+        public string KiemTra(string userName, string password)
         {
             try
             {
@@ -55,7 +57,7 @@ namespace Api_QLKhachSan_N2.Entities
                 SqlConnection myConnection = new SqlConnection(connectionString);
                 myConnection.Open();
 
-                var getProcedure = "getAllTaiKhoan";
+                var getProcedure = "Proc_GetAllTaiKhoan";
 
                 var results = myConnection.QueryMultiple(getProcedure, commandType: System.Data.CommandType.StoredProcedure);
 
@@ -64,14 +66,14 @@ namespace Api_QLKhachSan_N2.Entities
                 {
                     if (taikhoan.TenDangNhap == userName && taikhoan.MatKhau == password)
                     {
-                        return true;
+                        return taikhoan.Role;
                     }
                 }
-                return false;
+                return null;
             }
             catch (Exception)
             {
-                return false;
+                return null;
             }
         }
     }

@@ -45,6 +45,14 @@ namespace Api_QLKhachSan_N2
             });
 
             services.AddControllers();
+            services.AddCors(o =>
+            {
+                o.AddPolicy("AllowAll", builder =>
+                    builder.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                );
+            });
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Api_QLKhachSan_N2", Version = "v1" });
@@ -63,6 +71,7 @@ namespace Api_QLKhachSan_N2
 
             app.UseHttpsRedirection();
 
+            app.UseCors("AllowAll");
             app.UseRouting();
 
             app.UseAuthentication();

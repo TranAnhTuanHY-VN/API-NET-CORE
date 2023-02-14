@@ -7,6 +7,7 @@ namespace Api_QLKhachSan_N2.Entities
     {
         public string token { get; set; }
         public string user_name { get; set; }
+        public string role { get; set; }
         public int expires_in { get; set; }
 
     }
